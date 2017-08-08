@@ -313,12 +313,24 @@ describe('Project-1 Functions', () => {
       const combineNames = funcs.combineNames;
       assert.typeOf(combineNames, 'function')
     });
+    it('should take two strings and produce one string', () => {
+      assert.isString(funcs.combineNames('John', 'Hancock'));
+    });
+    it('should combine first and last names into one full name', () => {
+      assert.equal(funcs.combineNames('John', 'Hancock'), 'John Hancock');
+    });
   });
 
   describe('`getGreeting`', () => {
     it('should be a function', () => {
       const getGreeting = funcs.getGreeting;
       assert.typeOf(getGreeting, 'function')
+    });
+    it('should take one string and produce one string', () => {
+      assert.isString(funcs.combineNames('John'));
+    });
+    it('should take a name and add a Hello to it', () => {
+      assert.equal(funcs.getGreeting('John'), 'Hello John!');
     });
   });
 
@@ -327,6 +339,9 @@ describe('Project-1 Functions', () => {
       const getRectangleArea = funcs.getRectangleArea;
       assert.typeOf(getRectangleArea, 'function')
     });
+    it('should take two numbers and return their product as an area', () => {
+      assert.equal(funcs.getRectangleArea(3, 4), 12);
+    });
   });
 
   describe('`getTriangleArea`', () => {
@@ -334,6 +349,9 @@ describe('Project-1 Functions', () => {
       const getTriangleArea = funcs.getTriangleArea;
       assert.typeOf(getTriangleArea, 'function')
     });
+    it('should take two numbers and return one-half their product as a trianble area', () => {
+      assert.equal(funcs.getTriangleArea(3,4), 6);
+    })
   });
 
   describe('`getCircleArea`', () => {
@@ -341,6 +359,9 @@ describe('Project-1 Functions', () => {
       const getCircleArea = funcs.getCircleArea;
       assert.typeOf(getCircleArea, 'function')
     });
+    it('should take one number as a radius and produce the area of a circle', () => {
+      assert.equal(funcs.getCircleArea(3), 28.274333882308138);
+    })
   });
 
   describe('`getRectangularPrismVolume`', () => {
@@ -348,6 +369,9 @@ describe('Project-1 Functions', () => {
       const getRectangularPrismVolume = funcs.getRectangularPrismVolume;
       assert.typeOf(getRectangularPrismVolume, 'function')
     });
+    it('should take three numbers and produce their product as a volume', () => {
+      assert.equal(funcs.getRectangularPrismVolume(3, 4, 5), 60);
+    })
   });
 
 });
